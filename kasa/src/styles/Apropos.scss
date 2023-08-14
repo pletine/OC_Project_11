@@ -36,10 +36,10 @@ main {
                 right: 30px;
                 transform: rotate(0);
                 transition: transform 0.3s ease;
+            }
 
-                &.open {
-                    transform: rotate(180deg);
-                }
+            &.open:after {
+                transform: rotate(180deg);
             }
         }
     }
