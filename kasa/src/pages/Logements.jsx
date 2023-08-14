@@ -9,13 +9,13 @@ function Logement() {
   const nextQuestionNumber = questionNumberInt + 1;
   return (
     <div>
-      <h1>Questionnaire 🧮</h1>
-      <h2>Question {questionNumber}</h2>
-      <Link to={`/survey/${prevQuestionNumber}`}>Précédent</Link>
+      <h1>Logements 🧮</h1>
+      <h2>Logement {questionNumber}</h2>
+      <Link to={`/logement/${prevQuestionNumber}`}>Précédent</Link>
       {questionNumberInt === 10 ? (
-        <Link to="/results">Résultats</Link>
+        <Link to="/about">A propos</Link>
       ) : (
-        <Link to={`/survey/${nextQuestionNumber}`}>Suivant</Link>
+        <Link to={`/logement/${nextQuestionNumber}`}>Suivant</Link>
       )}
     </div>
   );
