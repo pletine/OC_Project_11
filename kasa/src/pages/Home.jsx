@@ -8,7 +8,7 @@ function Home() {
     <main className="home">
       <h1>Chez vous, partout et ailleurs</h1>
       {data.map((element) => (
-        <Link to={`/logement/${element.id}`}>
+        <Link to={`/logement/${data.indexOf(element)}`}>
           <h2 key={element.id}>{element.title}</h2>
         </Link>
       ))}
