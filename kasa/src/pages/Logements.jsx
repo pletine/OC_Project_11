@@ -12,7 +12,7 @@ function Logement() {
   //   logementIndexInt === data.length ? 1 : logementIndexInt + 1;
 
   return (
-    <main class="logement">
+    <main className="logement">
       <h1>{data[logementIndex].title}</h1>
       <h2>{data[logementIndex].description}</h2>
 

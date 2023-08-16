@@ -1,17 +1,16 @@
-import { Link } from 'react-router-dom';
-
 import '../styles/Home.scss';
 import data from '../assets/data.json';
+import HomeFigure from '../components/HomeFigure';
 
 function Home() {
+  const listLogements = data.map((element) => (
+    <HomeFigure key={element.id} value={element} />
+  ));
+
   return (
     <main className="home">
       <h1>Chez vous, partout et ailleurs</h1>
-      {data.map((element) => (
-        <Link to={`/logement/${data.indexOf(element)}`}>
-          <h2 key={element.id}>{element.title}</h2>
-        </Link>
-      ))}
+      <ul>{listLogements}</ul>
     </main>
   );
 }
