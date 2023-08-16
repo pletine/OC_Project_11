@@ -1,10 +1,10 @@
-import '../styles/Apropos.scss';
+import '../styles/About.scss';
 import image_page from '../assets/apropos.png';
 import Collapse from '../components/Collapse';
 
 function About() {
   return (
-    <main>
+    <main className="about">
       <img src={image_page} alt="Paysage" />
 
       <Collapse

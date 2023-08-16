@@ -1,0 +1,39 @@
+main.error {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    color: #FF6060;
+    
+ 
+    h1 {
+        font-size: 288px;
+        font-weight: 700;
+        line-height: 410px;
+        margin: 0;
+    }
+
+    p {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 51px;
+    }
+    
+    a {
+        text-decoration: none;
+        margin: 100px 0;
+
+        &:visited {
+            text-decoration: none;
+            color: #FF6060;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
