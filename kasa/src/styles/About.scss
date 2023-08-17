@@ -10,30 +10,23 @@ main.about {
         border-radius: 25px;
     }
 
-    h2 {
-        background-color: #FF6060;
-        color: #FFF;
-        padding-left: 20px;
-        padding-top: 10px;
-        border-radius: 10px;
-        height: 37px;
-    }
-
-    p {
-        padding-left: 20px;
-        padding-bottom: 20px;
-        padding-right: 20px;
-    }
-
     .collapse {
         background-color: #F6F6F6;
         border-radius: 10px;
+        margin: 20px;
 
         h2 {
+            background-color: #FF6060;
+            color: #FFF;
+            padding-left: 20px;
+            padding-top: 10px;
+            border-radius: 10px;
+            height: 37px;
+            
             &:after {
                 content: url('../assets/arrow_menu.svg');
                 position: absolute;
-                right: 30px;
+                right: 40px;
                 transform: rotate(0);
                 transition: transform 0.3s ease;
             }
@@ -41,6 +34,11 @@ main.about {
             &.open:after {
                 transform: rotate(180deg);
             }
+        }
+
+        p {
+            padding: 30px;
+            padding-top: 20px;
         }
     }
 }

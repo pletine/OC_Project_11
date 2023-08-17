@@ -7,6 +7,7 @@ function HomeFigure(props) {
     <li>
       <Link to={`/logement/${data.indexOf(element)}`}>
         <figure>
+          <div className="gradient"></div>
           <img src={`${element.cover}`} alt="Couverture du logement" />
           <figcaption>{element.title}</figcaption>
         </figure>

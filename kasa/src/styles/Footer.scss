@@ -2,7 +2,6 @@ footer {
     display: flex;
     position: absolute;
     left: 0;
-    // bottom: 0;
     width: 100%;
 
     flex-direction: column; 
@@ -12,6 +11,10 @@ footer {
 
     background-color: black;
     color: white;
-    margin: 0px;
     padding-top: 30px;
+    padding-bottom: 30px;
+
+    & > img {
+        padding-bottom: 20px;
+    }
 }
