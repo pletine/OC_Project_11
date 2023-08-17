@@ -1,0 +1,51 @@
+@import './global.scss';
+
+.carroussel {
+    height: 415px;
+
+    & > img {
+        position: absolute;
+        top: 48%;
+        // transform: translateY(-50%);
+        box-shadow: 5px 5px 5px 5px rgb(157, 157, 157);
+        z-index: 10;
+
+        &:first-child {
+            left: 120px;
+
+            @include small-screen {
+                left: 40px;
+            }
+        }
+
+        &:last-child {
+            right: 120px;
+
+            @include small-screen {
+                right: 40px;
+            }
+        }
+    }
+
+    .box_images {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 25px;
+        }
+    }
+
+    .carrou-show {
+        display: block;
+    }
+
+    .carrou-hidden {
+        display: none;
+    }
+}

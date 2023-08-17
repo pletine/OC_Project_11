@@ -1,12 +1,5 @@
 @import './style_reset_mini.scss';
-
-$max-width: 1440px;
-
-@mixin small-screen {
-    @media screen and (max-width: 800px) {
-        @content;
-    }
-}
+@import './global.scss';
 
 body {
   max-width: $max-width;

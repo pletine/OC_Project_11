@@ -9,36 +9,4 @@ main.about {
         object-fit: cover;
         border-radius: 25px;
     }
-
-    .collapse {
-        background-color: #F6F6F6;
-        border-radius: 10px;
-        margin: 20px;
-
-        h2 {
-            background-color: #FF6060;
-            color: #FFF;
-            padding-left: 20px;
-            padding-top: 10px;
-            border-radius: 10px;
-            height: 37px;
-            
-            &:after {
-                content: url('../assets/arrow_menu.svg');
-                position: absolute;
-                right: 40px;
-                transform: rotate(0);
-                transition: transform 0.3s ease;
-            }
-
-            &.open:after {
-                transform: rotate(180deg);
-            }
-        }
-
-        p {
-            padding: 30px;
-            padding-top: 20px;
-        }
-    }
 }
