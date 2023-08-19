@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Error from '../components/Error';
 import Carroussel from '../components/Carroussel';
 import Collapse from '../components/Collapse';
+import Rate from '../components/Rate';
 
 import data from '../assets/data.json';
 import '../styles/Logement.scss';
@@ -37,7 +38,7 @@ function Logement() {
             <img src={dataLogement.host.picture} alt="Propriétaire" />
             <figcaption>{dataLogement.host.name}</figcaption>
           </figure>
-          <p>{dataLogement.rating}</p>
+          <Rate rating={dataLogement.rating} />
         </div>
       </div>
 
