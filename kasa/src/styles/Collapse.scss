@@ -1,5 +1,5 @@
 .collapse {
-    background-color: #F6F6F6;
+    background-color: #FFFFFF;
     border-radius: 10px;
     margin: 20px;
 
@@ -18,9 +18,12 @@
             transform: rotate(0);
             transition: transform 0.3s ease;
         }
+    }
 
-        &.open:after {
-            transform: rotate(180deg);
+    &.open {
+        background-color: #F6F6F6;
+        h2:after {
+            transform: rotate(180deg) translateY(15%);
         }
     }
 

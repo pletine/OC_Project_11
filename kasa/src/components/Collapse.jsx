@@ -9,10 +9,8 @@ const Collapse = ({ title, content }) => {
   };
 
   return (
-    <div className={`collapse`}>
-      <h2 className={`${open ? 'open' : ''}`} onClick={toggleOpen}>
-        {title}
-      </h2>
+    <div className={`collapse ${open ? 'open' : ''}`} onClick={toggleOpen}>
+      <h2>{title}</h2>
       {open && <div>{content}</div>}
     </div>
   );

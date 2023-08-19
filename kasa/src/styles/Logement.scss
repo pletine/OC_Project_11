@@ -1,17 +1,71 @@
 main.logement {
     display: flex;
     flex-flow: column nowrap;
+    color: #FF6060;
 
     .presentation {
+        margin: 30px 0;
         display: flex;
         flex-flow: row nowrap;
+        position: relative;
+
+        & > * {
+            width: 50%;
+        }
 
         .title {
-            color: #FF6060;
+            h1 {
+                font-family: Montserrat;
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 51px;             
+            }
+
+            p {
+                font-family: Montserrat;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 26px;             
+            }
+
+            ul {
+                display: flex;
+                flex-flow: row wrap;
+                margin-top: 30px;
+                gap: 15px;
+
+                li {
+                    border-radius: 25px;
+                    background-color: #FF6060;
+                    color: #FFFFFF;
+                    padding: 5px 30px;
+                    margin: 0px 5px;
+                }
+            }
         }
 
         .owner {
-            color: #FF6060;
+            text-align: right;
+
+            figure {
+                display: flex;
+                flex-flow: row-reverse nowrap;
+                align-items: center;
+
+                img {
+                    border-radius: 50%;
+                    object-fit: cover;
+                    width: 64px;
+                    height: 64px;
+                }
+
+                figcaption {
+                    width: 80px;
+                    justify-content: right;
+                    text-align: right;
+                    margin-right: 20px;
+                }
+            }
         }
     }
 
@@ -27,6 +81,14 @@ main.logement {
             h2:after {
                 position: absolute;
                 right: 15px;
+            }
+        }
+
+        .collapse:last-child ul {
+            margin: 20px;
+
+            li {
+                padding: 3px;
             }
         }
     }

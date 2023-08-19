@@ -1,9 +1,11 @@
 @import './style_reset_mini.scss';
 @import './global.scss';
+@import './font.css';
 
 body {
   max-width: $max-width;
   margin: auto;
+  font-family: 'Montserrat';
 }
 
 #root {
