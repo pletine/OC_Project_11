@@ -1,17 +1,40 @@
+@import './global.scss';
+
 header {
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    img {
+        width: 210px;
+        height: 68px;
+
+        @include small-screen {
+            width: 145px;
+            height: 47px;
+        }
+    }
 
     nav > a{
         display:inline-block;
         color: #FF6060;
         text-decoration: none;
         margin: 20px;
+
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
     
         &:hover {
             text-decoration: underline;
+        }
+
+        @include small-screen {
+            font-size: 12px;
+            line-height: 17px;
+            margin: 20px 10px;
+            text-transform: uppercase;
         }
     }
 }

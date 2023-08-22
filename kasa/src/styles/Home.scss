@@ -1,3 +1,5 @@
+@import './global.scss';
+
 main.home {
     color: #FF6060;
 
@@ -5,6 +7,7 @@ main.home {
         display: flex;
         justify-content: center;
         align-items: center;
+        white-space: nowrap;
 
         color: #FFFFFF;
         font-size: 48px;
@@ -18,6 +21,16 @@ main.home {
         background-size: cover;
         background-position: center;
         background-blend-mode: darken;
+
+        @include small-screen {
+            justify-content: left;
+            white-space: nowrap;
+            padding-left: 30px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 24px;
+            height: 111px;
+        }
     }
 
     ul {
@@ -25,58 +38,63 @@ main.home {
         flex-flow: row wrap;
         background-color: #F6F6F6;
         border-radius: 25px;
+        padding: 30px;
+        gap: 30px;
+        justify-content: space-around;
 
+        @include small-screen {
+            flex-flow: column nowrap;
+        }
+        
         li {
-            justify-content: space-between;
-            margin: 30px;
+            width: 30%;
+            @include small-screen {
+                width: 100%;
+            }
+        }
 
-            a {
+        li a {
+            text-decoration: none;
+
+            &:visited {
                 text-decoration: none;
+            }
 
-                &:visited {
-                    text-decoration: none;
+            figure {
+                position: relative;
+                display: inline-block;
+                aspect-ratio: 1/1;
+                border-radius: 10px;
+
+                div {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+                    border-radius: 10px;
                 }
 
-                figure {
-                    position: relative;
-                    display: inline-block;
-                    height: 340px;
-                    width: 340px;
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
                     border-radius: 10px;
-                    background-image: linear-gradient(#FFFFFF 0%, #000000 50%);
+                }
 
-                    div {
-                        position: absolute;
-                        height: 100%;
-                        width: 100%;
-                        top: 0;
-                        left: 0;
-                        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-                        border-radius: 10px; 
-                    }
+                figcaption {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    width: 60%;
 
-                    img {
-                        object-fit: cover;
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 10px;
-                    }
-
-                    figcaption {
-                        position: absolute;
-                        bottom: 10px;
-                        left: 10px;
-                        width: 60%;
-
-                        color: white;
-                        line-height: 25px;
-                        font-size: 18px;
-                        font-weight: 500;
-                    }
+                    color: white;
+                    line-height: 25px;
+                    font-size: 18px;
+                    font-weight: 500;
                 }
             }
         }
     }
-
-
 }

@@ -1,12 +1,28 @@
+@import './global.scss';
+
 .star-rating {
-    display: inline-block;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: right;
+    margin-top: 20px;
+    align-items: center;
+
+    @include small-screen {
+        justify-content: left;
+        margin-top: 10px;
+    }
 }
 
 .star {
-    display: inline-block;
     width: 24px;
     height: 24px;
     padding: 5px;
+
+    @include small-screen {
+        width: 13px;
+        height: 13px;
+        padding: 2px;
+    }
 }
 
 .filled {

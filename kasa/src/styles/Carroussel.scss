@@ -1,27 +1,32 @@
 @import './global.scss';
 
 .carroussel {
+    position: relative;
     height: 415px;
+
+    @include small-screen {
+        height: 255px;
+    }
 
     & > img {
         position: absolute;
         top: 50%;
+        transform: translateY(-50%);
         z-index: 10;
+        width: 45px;
+        height: 80px;
+
+        @include small-screen {
+            width: 12px;
+            height: 20px;
+        }
 
         &:first-child {
-            left: 120px;
-
-            @include small-screen {
-                left: 40px;
-            }
+            left: 10px;
         }
 
         &:last-child {
-            right: 120px;
-
-            @include small-screen {
-                right: 40px;
-            }
+            right: 10px;
         }
     }
 
