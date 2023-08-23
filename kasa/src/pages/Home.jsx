@@ -10,8 +10,8 @@ function Home() {
   return (
     <main className="home">
       <h1>
-        Chez vous,
-        <br /> partout et ailleurs
+        <span>Chez vous,</span>
+        <span>partout et ailleurs</span>
       </h1>
       <ul>{listLogements}</ul>
     </main>

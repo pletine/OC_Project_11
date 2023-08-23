@@ -127,16 +127,26 @@ main.logement {
         .collapse {
             width: 50%;
             margin: 20px 0;
-            position: relative;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
 
             @include small-screen {
                 width: 100%;
                 margin: 10px 0;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 17px;
             }
 
-            h2:after {
-                position: absolute;
-                right: 15px;
+            h2 {
+                font-weight: 500;
+                height: 52px;
+
+                @include small-screen {
+                    font-size: 13px;
+                    height: 30px;
+                }
             }
         }
 
@@ -150,15 +160,6 @@ main.logement {
             margin-left: 10px;
             @include small-screen {
                 margin-left: 0px;
-            }
-        }
-
-        // Content of the second collapse box with list
-        .collapse:last-child ul {
-            margin: 20px;
-
-            li {
-                padding: 3px;
             }
         }
     }

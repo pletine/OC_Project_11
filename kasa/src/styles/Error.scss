@@ -1,3 +1,5 @@
+@import './global.scss';
+
 main.error {
     display: flex;
     justify-content: center;
@@ -11,17 +13,32 @@ main.error {
         font-weight: 700;
         line-height: 410px;
         margin: 0;
+
+        @include small-screen {
+            font-size: 96px;
+            font-weight: 700;
+            line-height: 137px;
+        }
     }
 
     p {
         font-size: 36px;
         font-weight: 500;
         line-height: 51px;
+
+        @include small-screen {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+        }
     }
     
     a {
         text-decoration: none;
         margin: 100px 0;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
 
         &:visited {
             text-decoration: none;
@@ -30,6 +47,11 @@ main.error {
 
         &:hover {
             text-decoration: underline;
+        }
+
+        @include small-screen {
+            font-size: 14px;
+            line-height: 20px;
         }
     }
 }

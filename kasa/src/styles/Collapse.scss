@@ -1,22 +1,42 @@
+@import './global.scss';
+
 .collapse {
     background-color: #FFFFFF;
     border-radius: 10px;
     margin: 20px;
+    position: relative;
+
+    & > * {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+
+        @include small-screen {
+            padding: 10px;
+        }
+    }
 
     h2 {
         background-color: #FF6060;
         color: #FFF;
-        padding-left: 20px;
-        padding-top: 10px;
         border-radius: 10px;
-        height: 37px;
         
         &:after {
-            content: url('../assets/arrow_menu.svg');
+            display: inline-block;
+            content: "";
+            background: url('../assets/arrow_menu.svg') center/contain no-repeat;
             position: absolute;
-            right: 40px;
+            right: 15px;
             transform: rotate(0);
             transition: transform 0.3s ease;
+
+            width: 24px;
+            height: 14px;
+
+            @include small-screen {
+                width: 16px;
+                height: 9px;
+            }
         }
     }
 
@@ -25,10 +45,5 @@
         h2:after {
             transform: rotate(180deg) translateY(15%);
         }
-    }
-
-    p {
-        padding: 30px;
-        padding-top: 20px;
     }
 }
