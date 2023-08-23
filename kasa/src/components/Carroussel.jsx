@@ -20,13 +20,30 @@ function Carroussel(props) {
     );
   };
 
-  return (
+  const numerotation = (numImages) => {
+    return numImages > 1 ? (
+      <p>
+        {currentImageIdx + 1}/{numImages}
+      </p>
+    ) : (
+      <p></p>
+    );
+  };
+
+  return listImages.length > 1 ? (
     <div className="carroussel">
       <img src={previous} alt="Précédent" onClick={prevImage} />
       <div className="box_image">
         <img src={listImages[currentImageIdx]} alt={`${currentImageIdx}`} />
+        {numerotation(listImages.length)}
       </div>
       <img src={next} alt="Suivant" onClick={nextImage} />
+    </div>
+  ) : (
+    <div className="carroussel">
+      <div className="box_image">
+        <img src={listImages[currentImageIdx]} alt={`${currentImageIdx}`} />
+      </div>
     </div>
   );
 }

@@ -33,6 +33,7 @@
     .box_image {
         display: flex;
         justify-content: center;
+        position: relative;
         height: 100%;
         width: 100%;
 
@@ -41,6 +42,12 @@
             height: 100%;
             width: 100%;
             border-radius: 25px;
+        }
+
+        p {
+            position: absolute;
+            color: white;
+            bottom: 5px;
         }
     }
 }
